@@ -1,0 +1,6587 @@
+@charset "UTF-8";
+/* Обнуление стилей CSS */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  overflow-x: hidden; /* отключает горизонтальный скрол */
+  overflow-y: scroll; /* включает вертикальный скрол*/
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #303030, #c5dde8);
+  border-radius: 20px;
+  border: 3px solid #050c26;
+}
+
+.select_header > option, .select_header {
+  width: 60px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  background-color: #000000;
+  height: 40px;
+}
+
+body {
+  background-color: #121212;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #121212;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.scroll__div {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.scroll-button {
+  width: 57px;
+  height: 57px;
+  background-color: rgb(0, 157, 255);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 1000;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Скрываем кнопку, пока не прокрутим вниз */
+}
+
+.scroll-button:hover {
+  background-color: #007ecc;
+}
+
+.scroll-button:focus {
+  outline: none;
+}
+
+.header {
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 120px 1fr 120px;
+  grid-template-columns: 120px 1fr 120px;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1c1c1c;
+  z-index: 50;
+}
+
+.header__contain {
+  position: relative;
+  z-index: 100;
+}
+
+.logo > img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 60px;
+}
+
+.telegram__link {
+  position: fixed;
+  top: 5px;
+  right: 35px;
+  width: 40px;
+  height: 40px;
+}
+
+form {
+  position: fixed;
+  top: 9px;
+  left: 75px;
+  width: calc(100% - 240px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 42px;
+}
+
+input,
+button {
+  outline: none;
+  background: transparent;
+}
+
+input {
+  width: calc(100% - 70px);
+  height: 42px;
+  padding-left: 11px;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  border: 0.6px solid rgba(234, 228, 228, 0.7);
+  border-radius: 2px;
+}
+
+button {
+  position: relative;
+  top: -1.9px;
+  left: 1px;
+  height: 42px;
+  width: 64px;
+  cursor: pointer;
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  background-color: rgb(0, 157, 255);
+}
+
+button:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+input:hover,
+input:focus {
+  -webkit-box-shadow: 0px 0px 1.9px 0.6px rgba(255, 255, 255, 0.4);
+          box-shadow: 0px 0px 1.9px 0.6px rgba(255, 255, 255, 0.4);
+}
+
+.menu__teacher {
+  display: inline-block;
+  background-color: #1c1c1c;
+  padding: 20px 25px 20px 0px;
+  margin: 105px 25px 25px;
+  border: 1.5px solid #424242;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+}
+.menu__teacher:hover {
+  background-color: 1px solid white;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.menu__teacher__wrapper {
+  margin: 0 auto;
+  margin-bottom: -50px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  max-width: 1400px;
+  padding-left: 25px;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.menu__teacher__list {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  max-width: 1400px;
+  padding-left: 25px;
+  margin-top: 60px;
+}
+.menu__teacher__list > li > a {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+}
+.menu__teacher__list > li > a:hover {
+  text-decoration: underline;
+}
+.menu__teacher__list > li {
+  padding-top: 12px;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+}
+.menu__teacher__list > li:hover {
+  -webkit-transform: scale(1.013);
+          transform: scale(1.013);
+}
+
+.select_header {
+  position: fixed;
+  top: 10px;
+  right: 90px;
+  background-color: transparent;
+  border: none;
+}
+.select_header > option {
+  width: 57px;
+  border: none;
+}
+.select_header > option::before {
+  content: "";
+}
+
+.card {
+  padding: 0 15px;
+}
+
+.colums__category {
+  padding-left: 25px;
+  margin: 0 auto;
+  margin-bottom: -50px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  max-width: 1500px;
+}
+.colums__category > h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.colums {
+  padding: 80px 1%;
+  margin: 0 auto;
+  gap: 10px;
+  display: -ms-grid;
+  display: grid;
+  /* // background-color: rgb(55, 55, 55); */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* //color: whitesmoke;  */
+  margin-bottom: 40px;
+}
+
+.colums__informatics__teacher {
+  -ms-grid-columns: (minmax(200px, 283px))[5];
+  grid-template-columns: repeat(5, minmax(200px, 283px));
+  -ms-grid-rows: (340px)[5];
+  grid-template-rows: repeat(5, 340px);
+}
+
+.colums__informatics__teacher > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.colums__informatics__teacher > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.colums__informatics__teacher > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.colums__informatics__teacher > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.colums__informatics__teacher > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.colums__informatics__teacher > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.colums__informatics__teacher > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.colums__informatics__teacher > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.colums__informatics__teacher > *:nth-child(9) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+
+.colums__informatics__teacher > *:nth-child(10) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+}
+
+.colums__informatics__teacher > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.colums__informatics__teacher > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.colums__informatics__teacher > *:nth-child(13) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.colums__informatics__teacher > *:nth-child(14) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+}
+
+.colums__informatics__teacher > *:nth-child(15) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.colums__informatics__teacher > *:nth-child(16) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+
+.colums__informatics__teacher > *:nth-child(17) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+}
+
+.colums__informatics__teacher > *:nth-child(18) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+}
+
+.colums__informatics__teacher > *:nth-child(19) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+}
+
+.colums__informatics__teacher > *:nth-child(20) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+}
+
+.colums__informatics__teacher > *:nth-child(21) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.colums__informatics__teacher > *:nth-child(22) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+}
+
+.colums__informatics__teacher > *:nth-child(23) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+.colums__informatics__teacher > *:nth-child(24) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+}
+
+.colums__informatics__teacher > *:nth-child(25) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+
+.colums__literatura__teacher {
+  -ms-grid-columns: (minmax(200px, 283px))[5];
+  grid-template-columns: repeat(5, minmax(200px, 283px));
+  -ms-grid-rows: (340px)[3];
+  grid-template-rows: repeat(3, 340px);
+}
+
+.colums__literatura__teacher > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.colums__literatura__teacher > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.colums__literatura__teacher > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.colums__literatura__teacher > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.colums__literatura__teacher > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.colums__literatura__teacher > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.colums__literatura__teacher > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.colums__literatura__teacher > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.colums__literatura__teacher > *:nth-child(9) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+
+.colums__literatura__teacher > *:nth-child(10) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+}
+
+.colums__literatura__teacher > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.colums__literatura__teacher > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.colums__literatura__teacher > *:nth-child(13) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.colums__literatura__teacher > *:nth-child(14) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+}
+
+.colums__literatura__teacher > *:nth-child(15) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.colums__phisics__teacher {
+  -ms-grid-columns: (minmax(200px, 283px))[5];
+  grid-template-columns: repeat(5, minmax(200px, 283px));
+  -ms-grid-rows: (340px)[2];
+  grid-template-rows: repeat(2, 340px);
+}
+
+.colums__phisics__teacher > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.colums__phisics__teacher > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.colums__phisics__teacher > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.colums__phisics__teacher > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.colums__phisics__teacher > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.colums__phisics__teacher > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.colums__phisics__teacher > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.colums__phisics__teacher > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.colums__phisics__teacher > *:nth-child(9) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+
+.colums__phisics__teacher > *:nth-child(10) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+}
+
+.colums__history__teacher,
+.colums__natural__teacher, .colums__draw__teacher {
+  -ms-grid-columns: (minmax(200px, 283px))[5];
+  grid-template-columns: repeat(5, minmax(200px, 283px));
+  -ms-grid-rows: (340px)[2];
+  grid-template-rows: repeat(2, 340px);
+}
+
+.colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+
+.colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+}
+
+.colums__english__teacher {
+  -ms-grid-columns: (minmax(200px, 283px))[5];
+  grid-template-columns: repeat(5, minmax(200px, 283px));
+  -ms-grid-rows: (340px)[4];
+  grid-template-rows: repeat(4, 340px);
+}
+
+.colums__english__teacher > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.colums__english__teacher > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.colums__english__teacher > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.colums__english__teacher > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.colums__english__teacher > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.colums__english__teacher > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.colums__english__teacher > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.colums__english__teacher > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.colums__english__teacher > *:nth-child(9) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+}
+
+.colums__english__teacher > *:nth-child(10) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+}
+
+.colums__english__teacher > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.colums__english__teacher > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.colums__english__teacher > *:nth-child(13) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.colums__english__teacher > *:nth-child(14) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+}
+
+.colums__english__teacher > *:nth-child(15) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.colums__english__teacher > *:nth-child(16) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+
+.colums__english__teacher > *:nth-child(17) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+}
+
+.colums__english__teacher > *:nth-child(18) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+}
+
+.colums__english__teacher > *:nth-child(19) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+}
+
+.colums__english__teacher > *:nth-child(20) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+}
+
+.colums__administration__teacher, .colums__other__teacher {
+  -ms-grid-columns: (minmax(200px, 283px))[5];
+  grid-template-columns: repeat(5, minmax(200px, 283px));
+  -ms-grid-rows: (340px)[1];
+  grid-template-rows: repeat(1, 340px);
+}
+
+.colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+}
+
+.colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.column {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 1px -10px 1px;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  margin-bottom: 1px;
+}
+
+.column:hover {
+  -webkit-box-shadow: 0 2px 2px #606060;
+          box-shadow: 0 2px 2px #606060;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.column:hover .picture .price .name .location {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.picture {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  background-color: #000000;
+  border-radius: 5%;
+  overflow: hidden;
+  height: 65%;
+}
+.picture > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.name {
+  font-size: 23px;
+  /* color: rgba(242, 242, 242, 0.9) ; */
+  color: rgb(0, 157, 255);
+  margin: 2% 2% 3% 4%;
+}
+
+.price {
+  color: rgb(229, 229, 229);
+  font-size: 18px;
+  font-weight: 1100;
+  text-decoration: underline;
+  margin: 2%;
+  margin: 2% 2% 3% 4%;
+}
+
+.caption {
+  /* //color: rgba(211, 210, 210, 0.7);  */
+  color: rgb(217, 217, 217);
+  overflow: hidden;
+  text-align: center;
+  margin: 4% 3%;
+  text-align: start;
+  font-size: 17px;
+}
+.caption::before {
+  content: "⭐ ";
+  font-size: 17px;
+}
+
+.location {
+  color: rgb(203, 203, 203);
+  overflow: hidden;
+  text-align: center;
+  margin: 4% 4%;
+  text-align: start;
+  font-size: 16px;
+}
+
+@media (max-width: 1400px) {
+  .colums__category {
+    margin: 0;
+    margin-bottom: -50px;
+  }
+}
+@media (min-width: 1090px) {
+  .rules {
+    display: none;
+  }
+  .burger-checkbox {
+    display: none;
+  }
+  .burger {
+    display: none;
+  }
+  .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: white;
+  }
+  .menu-list .menu-item {
+    color: white;
+    font-size: 21px;
+    padding: 7px 0px 7px 0px;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .menu-list .menu-item:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+    color: rgb(0, 157, 255);
+  }
+  .menu-list .menu-head {
+    color: rgb(0, 157, 255);
+  }
+  .menu-list {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+@media (max-width: 1260px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (320px)[5];
+    grid-template-rows: repeat(5, 320px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(23) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(24) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(25) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (320px)[3];
+    grid-template-rows: repeat(3, 320px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (320px)[2];
+    grid-template-rows: repeat(2, 320px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (320px)[2];
+    grid-template-rows: repeat(2, 320px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (320px)[4];
+    grid-template-rows: repeat(4, 320px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 5;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (320px)[1];
+    grid-template-rows: repeat(1, 320px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums {
+    margin-bottom: 1px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 22px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 17px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 17px;
+  }
+  .colums .column .location {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1197px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (315px)[5];
+    grid-template-rows: repeat(5, 315px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 5;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(23) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(24) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(25) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (315px)[3];
+    grid-template-rows: repeat(3, 315px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (315px)[2];
+    grid-template-rows: repeat(2, 315px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (315px)[2];
+    grid-template-rows: repeat(2, 315px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (315px)[4];
+    grid-template-rows: repeat(4, 315px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 5;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(200px, 250px))[5];
+    grid-template-columns: repeat(5, minmax(200px, 250px));
+    -ms-grid-rows: (315px)[1];
+    grid-template-rows: repeat(1, 315px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 22px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 17px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 17px;
+  }
+  .colums .column .location {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1110px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(200px, 260px))[4];
+    grid-template-columns: repeat(4, minmax(200px, 260px));
+    -ms-grid-rows: (320px)[6];
+    grid-template-rows: repeat(6, 320px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(23) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(24) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(200px, 260px))[4];
+    grid-template-columns: repeat(4, minmax(200px, 260px));
+    -ms-grid-rows: (320px)[4];
+    grid-template-rows: repeat(4, 320px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(200px, 260px))[4];
+    grid-template-columns: repeat(4, minmax(200px, 260px));
+    -ms-grid-rows: (320px)[2];
+    grid-template-rows: repeat(2, 320px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(200px, 260px))[4];
+    grid-template-columns: repeat(4, minmax(200px, 260px));
+    -ms-grid-rows: (320px)[3];
+    grid-template-rows: repeat(3, 320px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(11), .colums__natural__teacher > *:nth-child(11), .colums__draw__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(12), .colums__natural__teacher > *:nth-child(12), .colums__draw__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(200px, 260px))[4];
+    grid-template-columns: repeat(4, minmax(200px, 260px));
+    -ms-grid-rows: (320px)[5];
+    grid-template-rows: repeat(5, 320px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(200px, 260px))[4];
+    grid-template-columns: repeat(4, minmax(200px, 260px));
+    -ms-grid-rows: (320px)[2];
+    grid-template-rows: repeat(2, 320px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(7), .colums__other__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(8), .colums__other__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 22px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 17px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 17px;
+  }
+  .colums .column .location {
+    font-size: 16px;
+  }
+  .rules {
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  .menu {
+    position: fixed;
+    top: 15px;
+    left: 80px;
+  }
+  .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  .burger::before {
+    top: 0;
+    -webkit-box-shadow: 0 11px 0 #ffffff;
+            box-shadow: 0 11px 0 #ffffff;
+    -webkit-transition: top 0.3s 0.15s, -webkit-box-shadow 0.3s 0.15s, -webkit-transform 0.3s;
+    transition: top 0.3s 0.15s, -webkit-box-shadow 0.3s 0.15s, -webkit-transform 0.3s;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s, -webkit-box-shadow 0.3s 0.15s, -webkit-transform 0.3s;
+  }
+  .burger::after {
+    bottom: 0;
+    -webkit-transition: bottom 0.3s 0.15s, -webkit-transform 0.3s;
+    transition: bottom 0.3s 0.15s, -webkit-transform 0.3s;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+    transition: bottom 0.3s 0.15s, transform 0.3s, -webkit-transform 0.3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    -webkit-transition: top 0.3s, -webkit-box-shadow 0.15s, -webkit-transform 0.3s 0.15s;
+    transition: top 0.3s, -webkit-box-shadow 0.15s, -webkit-transform 0.3s 0.15s;
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s, -webkit-box-shadow 0.15s, -webkit-transform 0.3s 0.15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: bottom 0.3s, -webkit-transform 0.3s 0.15s;
+    transition: bottom 0.3s, -webkit-transform 0.3s 0.15s;
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+    transition: bottom 0.3s, transform 0.3s 0.15s, -webkit-transform 0.3s 0.15s;
+  }
+  .menu-list {
+    top: 45px;
+    left: 0;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    gap: 12px;
+    font-size: 15px;
+    margin-left: -80px;
+    background: #121212;
+    list-style-type: none;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 250px;
+    height: 300px;
+  }
+  .menu-item {
+    display: block;
+    padding-left: 15px;
+    margin-right: 25px;
+    margin-left: 15px;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: start;
+    text-decoration: none;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .menu-item:hover {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+    color: rgb(0, 157, 255);
+    border-bottom: solid 1px rgb(0, 157, 255);
+    background-color: #303030;
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .menu-head {
+    margin-top: 20px;
+    color: rgb(0, 157, 255);
+  }
+  .rules {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+  }
+  .rules:hover {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+    color: rgb(0, 157, 255);
+  }
+}
+@media (max-width: 952px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (305px)[6];
+    grid-template-rows: repeat(6, 305px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(23) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(24) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (305px)[4];
+    grid-template-rows: repeat(4, 305px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (305px)[2];
+    grid-template-rows: repeat(2, 305px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (305px)[3];
+    grid-template-rows: repeat(3, 305px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(11), .colums__natural__teacher > *:nth-child(11), .colums__draw__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(12), .colums__natural__teacher > *:nth-child(12), .colums__draw__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (305px)[5];
+    grid-template-rows: repeat(5, 305px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (305px)[2];
+    grid-template-rows: repeat(2, 305px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(7), .colums__other__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(8), .colums__other__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .menu__teacher {
+    margin-bottom: 0px;
+  }
+  .menu__teacher .menu__teacher__wrapper {
+    font-size: 22px;
+  }
+  .menu__teacher .menu__teacher__list > li > a {
+    font-size: 20px;
+  }
+  .colums__category > h2 {
+    font-size: 27px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 20px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 16px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 16px;
+  }
+  .colums .column .location {
+    font-size: 15px;
+  }
+}
+@media (max-width: 847px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (285px)[6];
+    grid-template-rows: repeat(6, 285px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(23) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(24) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (285px)[4];
+    grid-template-rows: repeat(4, 285px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (285px)[2];
+    grid-template-rows: repeat(2, 285px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (285px)[3];
+    grid-template-rows: repeat(3, 285px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(11), .colums__natural__teacher > *:nth-child(11), .colums__draw__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(12), .colums__natural__teacher > *:nth-child(12), .colums__draw__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (285px)[5];
+    grid-template-rows: repeat(5, 285px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(180px, 250px))[4];
+    grid-template-columns: repeat(4, minmax(180px, 250px));
+    -ms-grid-rows: (285px)[2];
+    grid-template-rows: repeat(2, 285px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(7), .colums__other__teacher > *:nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(8), .colums__other__teacher > *:nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 19px;
+  }
+  .colums .column .price {
+    font-size: 17px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 15px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 15px;
+  }
+  .colums .column .location {
+    font-size: 14px;
+  }
+}
+@media (max-width: 807px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[7];
+    grid-template-rows: repeat(7, 315px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[5];
+    grid-template-rows: repeat(5, 315px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[3];
+    grid-template-rows: repeat(3, 315px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[3];
+    grid-template-rows: repeat(3, 315px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[4];
+    grid-template-rows: repeat(4, 315px);
+  }
+  .colums__natural__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[7];
+    grid-template-rows: repeat(7, 315px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(195px, 265px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 265px));
+    -ms-grid-rows: (315px)[2];
+    grid-template-rows: repeat(2, 315px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums {
+    gap: 7px;
+    padding: 0 7px;
+    padding-top: 70px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 22px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 17px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 17px;
+  }
+  .colums .column .location {
+    font-size: 16px;
+  }
+  .menu {
+    position: fixed;
+    top: 12.5px;
+    left: 65px;
+  }
+  .menu-list {
+    margin-left: -65px;
+  }
+  .telegram__link {
+    position: fixed;
+    top: 3px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  .telegram__link > img {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 700px) {
+  .scroll-button {
+    width: 57px;
+    height: 57px;
+  }
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[7];
+    grid-template-rows: repeat(7, 300px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[5];
+    grid-template-rows: repeat(5, 300px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[3];
+    grid-template-rows: repeat(3, 300px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[3];
+    grid-template-rows: repeat(3, 300px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[4];
+    grid-template-rows: repeat(4, 300px);
+  }
+  .colums__natural__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[7];
+    grid-template-rows: repeat(7, 300px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(195px, 250px))[3];
+    grid-template-columns: repeat(3, minmax(195px, 250px));
+    -ms-grid-rows: (300px)[2];
+    grid-template-rows: repeat(2, 300px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .menu__teacher {
+    margin-top: 85px;
+  }
+  .menu__teacher .menu__teacher__wrapper {
+    font-size: 20px;
+  }
+  .menu__teacher .menu__teacher__list > li > a {
+    font-size: 18px;
+  }
+  .colums__category > h2 {
+    font-size: 25px;
+  }
+  .colums {
+    margin-bottom: 25px;
+  }
+  .colums .column .name {
+    font-size: 20px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 17px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 17px;
+  }
+  .colums .column .location {
+    font-size: 16px;
+  }
+}
+@media (max-width: 625px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[7];
+    grid-template-rows: repeat(7, 275px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[5];
+    grid-template-rows: repeat(5, 275px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[3];
+    grid-template-rows: repeat(3, 275px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[3];
+    grid-template-rows: repeat(3, 275px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[4];
+    grid-template-rows: repeat(4, 275px);
+  }
+  .colums__natural__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[7];
+    grid-template-rows: repeat(7, 275px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (275px)[2];
+    grid-template-rows: repeat(2, 275px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums {
+    padding: 0 7px;
+    padding-top: 70px;
+    margin-bottom: 120px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 18px;
+  }
+  .colums .column .price {
+    font-size: 16px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 15px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 15px;
+  }
+  .colums .column .location {
+    font-size: 14px;
+  }
+}
+@media (max-width: 570px) {
+  .menu__teacher {
+    margin-top: 85px;
+  }
+  .menu__teacher .menu__teacher__wrapper {
+    font-size: 18px;
+  }
+  .menu__teacher .menu__teacher__list > li > a {
+    font-size: 16px;
+  }
+  .colums__category > h2 {
+    font-size: 23px;
+  }
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[7];
+    grid-template-rows: repeat(7, 255px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[5];
+    grid-template-rows: repeat(5, 255px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[3];
+    grid-template-rows: repeat(3, 255px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[3];
+    grid-template-rows: repeat(3, 255px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[4];
+    grid-template-rows: repeat(4, 255px);
+  }
+  .colums__natural__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__natural__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__natural__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__natural__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[7];
+    grid-template-rows: repeat(7, 255px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(21) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(130px, 215px))[3];
+    grid-template-columns: repeat(3, minmax(130px, 215px));
+    -ms-grid-rows: (255px)[2];
+    grid-template-rows: repeat(2, 255px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .colums {
+    padding: 0 7px;
+    padding-top: 70px;
+    margin-bottom: 80px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 16px;
+  }
+  .colums .column .price {
+    font-size: 14.5px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 14px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 14px;
+  }
+  .colums .column .location {
+    font-size: 13px;
+  }
+}
+@media (max-width: 542px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(215px, 260px))[2];
+    grid-template-columns: repeat(2, minmax(215px, 260px));
+    -ms-grid-rows: (340px)[11];
+    grid-template-rows: repeat(11, 340px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(215px, 260px))[2];
+    grid-template-columns: repeat(2, minmax(215px, 260px));
+    -ms-grid-rows: (340px)[8];
+    grid-template-rows: repeat(8, 340px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(215px, 260px))[2];
+    grid-template-columns: repeat(2, minmax(215px, 260px));
+    -ms-grid-rows: (340px)[4];
+    grid-template-rows: repeat(4, 340px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(215px, 260px))[2];
+    grid-template-columns: repeat(2, minmax(215px, 260px));
+    -ms-grid-rows: (340px)[5];
+    grid-template-rows: repeat(5, 340px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(215px, 260px))[2];
+    grid-template-columns: repeat(2, minmax(215px, 260px));
+    -ms-grid-rows: (340px)[10];
+    grid-template-rows: repeat(10, 340px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(215px, 260px))[2];
+    grid-template-columns: repeat(2, minmax(215px, 260px));
+    -ms-grid-rows: (340px)[3];
+    grid-template-rows: repeat(3, 340px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__category > h2 {
+    font-size: 25px;
+  }
+  .colums {
+    padding: 0 7px;
+    padding-top: 70px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 22px;
+  }
+  .colums .column .price {
+    font-size: 20px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 18px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 18px;
+  }
+  .colums .column .location {
+    font-size: 16px;
+  }
+}
+@media (max-width: 515px) {
+  .colums__category > h2 {
+    font-size: 25px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 22px;
+  }
+  .colums .column .price {
+    font-size: 20px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 18px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 18px;
+  }
+  .colums .column .location {
+    font-size: 16px;
+  }
+}
+@media (max-width: 470px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(130px, 250px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    -ms-grid-rows: (315px)[11];
+    grid-template-rows: repeat(11, 315px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(130px, 250px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    -ms-grid-rows: (315px)[8];
+    grid-template-rows: repeat(8, 315px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(130px, 250px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    -ms-grid-rows: (315px)[4];
+    grid-template-rows: repeat(4, 315px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(130px, 250px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    -ms-grid-rows: (315px)[5];
+    grid-template-rows: repeat(5, 315px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(130px, 250px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    -ms-grid-rows: (315px)[10];
+    grid-template-rows: repeat(10, 315px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(130px, 250px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 250px));
+    -ms-grid-rows: (315px)[3];
+    grid-template-rows: repeat(3, 315px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums {
+    padding: 0 7px;
+    padding-top: 70px;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 20px;
+  }
+  .colums .column .price {
+    font-size: 18px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 16px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 16px;
+  }
+  .colums .column .location {
+    font-size: 15px;
+  }
+}
+@media (max-width: 420px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (285px)[11];
+    grid-template-rows: repeat(11, 285px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (285px)[8];
+    grid-template-rows: repeat(8, 285px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (285px)[4];
+    grid-template-rows: repeat(4, 285px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (285px)[5];
+    grid-template-rows: repeat(5, 285px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (285px)[11];
+    grid-template-rows: repeat(11, 285px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(21) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(22) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (285px)[3];
+    grid-template-rows: repeat(3, 285px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums {
+    padding: 0 7px;
+    padding-top: 70px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 17px;
+  }
+  .colums .column .price {
+    font-size: 16px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 15px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 15px;
+  }
+  .colums .column .location {
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .colums__informatics__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (255px)[11];
+    grid-template-rows: repeat(11, 255px);
+  }
+  .colums__informatics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__informatics__teacher > *:nth-child(21) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .colums__informatics__teacher > *:nth-child(22) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (255px)[8];
+    grid-template-rows: repeat(8, 255px);
+  }
+  .colums__literatura__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__literatura__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__literatura__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (255px)[4];
+    grid-template-rows: repeat(4, 255px);
+  }
+  .colums__phisics__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__phisics__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__phisics__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher,
+  .colums__natural__teacher, .colums__draw__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (255px)[5];
+    grid-template-rows: repeat(5, 255px);
+  }
+  .colums__history__teacher > *:nth-child(1), .colums__natural__teacher > *:nth-child(1), .colums__draw__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(2), .colums__natural__teacher > *:nth-child(2), .colums__draw__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(3), .colums__natural__teacher > *:nth-child(3), .colums__draw__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(4), .colums__natural__teacher > *:nth-child(4), .colums__draw__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(5), .colums__natural__teacher > *:nth-child(5), .colums__draw__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(6), .colums__natural__teacher > *:nth-child(6), .colums__draw__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(7), .colums__natural__teacher > *:nth-child(7), .colums__draw__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(8), .colums__natural__teacher > *:nth-child(8), .colums__draw__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__history__teacher > *:nth-child(9), .colums__natural__teacher > *:nth-child(9), .colums__draw__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__history__teacher > *:nth-child(10), .colums__natural__teacher > *:nth-child(10), .colums__draw__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (255px)[10];
+    grid-template-rows: repeat(10, 255px);
+  }
+  .colums__english__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(11) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(12) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(13) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(14) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(15) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(16) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(17) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(18) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 2;
+  }
+  .colums__english__teacher > *:nth-child(19) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+  }
+  .colums__english__teacher > *:nth-child(20) {
+    -ms-grid-row: 10;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher, .colums__other__teacher {
+    -ms-grid-columns: (minmax(130px, 240px))[2];
+    grid-template-columns: repeat(2, minmax(130px, 240px));
+    -ms-grid-rows: (255px)[3];
+    grid-template-rows: repeat(3, 255px);
+  }
+  .colums__administration__teacher > *:nth-child(1), .colums__other__teacher > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(2), .colums__other__teacher > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(3), .colums__other__teacher > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(4), .colums__other__teacher > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .colums__administration__teacher > *:nth-child(5), .colums__other__teacher > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .colums__administration__teacher > *:nth-child(6), .colums__other__teacher > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .colums {
+    padding: 0 7px;
+    padding-top: 70px;
+  }
+  .colums .column {
+    margin-bottom: 1px;
+  }
+  .colums .column .name {
+    font-size: 15px;
+  }
+  .colums .column .price {
+    font-size: 14px;
+    font-weight: 1050;
+  }
+  .colums .column .caption {
+    font-size: 13px;
+  }
+  .colums .column .caption::before {
+    content: "⭐ ";
+    font-size: 13px;
+  }
+  .colums .column .location {
+    font-size: 12px;
+  }
+}
+@media (max-width: 780px) {
+  .header {
+    width: 100%;
+    height: 50px;
+  }
+  .menu-list {
+    top: 37px;
+  }
+  .header__contain {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  form {
+    height: 38px;
+    top: 6px;
+    left: 121px;
+  }
+  input {
+    height: 38px;
+  }
+  button {
+    height: 39px;
+    top: -2px;
+  }
+  .logo > img {
+    width: 55px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,1418 @@
+@charset "UTF-8";
+/* Обнуление стилей CSS */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+body {
+	overflow-x: hidden; /* отключает горизонтальный скрол */
+	overflow-y: scroll; /* включает вертикальный скрол*/
+}
+
+body::-webkit-scrollbar-thumb {
+	background: linear-gradient(45deg, #303030, #c5dde8);
+	border-radius: 20px;
+	border: 3px solid #050c26;
+}
+
+$color_tems: rgb(0, 157, 255);
+$color_dark_back: #121212;
+$color_dark_back_tem: white; //no using
+$color_dark_card: #1c1c1c;
+
+%select_style_lan {
+	width: 60px;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	background-color: #000000;
+	height: 40px;
+}
+
+body {
+	background-color: $color_dark_back;
+	position: relative;
+}
+
+.wrapper {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	color: $color_dark_back;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+
+	position: relative;
+}
+
+.scroll__div {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+}
+.scroll-button {
+	// position: fixed;
+	// left: 50px;
+	// bottom: 50px;
+
+	width: 57px;
+	height: 57px;
+	background-color: rgb(0, 157, 255);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	font-size: 25px;
+	font-weight: 1000;
+	cursor: pointer;
+	z-index: 1000;
+	display: none; /* Скрываем кнопку, пока не прокрутим вниз */
+}
+
+.scroll-button:hover {
+	background-color: darken(rgb(0, 157, 255), 10%);
+}
+
+.scroll-button:focus {
+	outline: none;
+}
+
+.header {
+	position: fixed;
+	display: grid;
+	grid-template-columns: 120px 1fr 120px;
+	align-self: center;
+	align-items: center;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background-color: $color_dark_card;
+	z-index: 50;
+}
+.header__contain {
+	position: relative;
+	z-index: 100;
+}
+
+.logo > img {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 65px;
+	height: 60px;
+}
+
+.telegram__link {
+	position: fixed;
+	top: 5px;
+	right: 35px;
+	width: 40px;
+	height: 40px;
+}
+form {
+	position: fixed;
+	top: 9px;
+	left: 75px;
+	width: calc(100% - 240px);
+	align-items: center;
+	height: 42px;
+}
+input,
+button {
+	outline: none;
+	background: transparent;
+}
+input {
+	width: calc(100% - 70px);
+	height: 42px;
+	padding-left: 11px;
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+	border: 0.6px solid rgba(234, 228, 228, 0.7);
+	border-radius: 2px;
+}
+button {
+	position: relative;
+	top: -1.9px;
+	left: 1px;
+	height: 42px;
+	width: 64px;
+	cursor: pointer;
+	border-radius: 2px;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	background-color: $color_tems;
+}
+button:hover {
+	transform: scale(1.09);
+	transition-duration: 0.6s;
+	transition-timing-function: ease-in;
+}
+
+input:hover,
+input:focus {
+	box-shadow: 0px 0px 1.9px 0.6px rgba(255, 255, 255, 0.4);
+}
+
+.menu__teacher {
+	display: inline-block;
+	background-color: $color_dark_card;
+	padding: 20px 25px 20px 0px;
+	margin: 105px 25px 25px;
+	border: 1.5px solid #424242;
+	transition: transform 0.3s, box-shadow 0.3s;
+	&:hover {
+		background-color: 1px solid white;
+		transform: scale(1.02);
+	}
+}
+
+.menu__teacher__wrapper {
+	margin: 0 auto;
+	margin-bottom: -50px;
+	display: grid;
+	justify-content: start;
+	max-width: 1400px;
+	padding-left: 25px;
+
+	color: white;
+	font-size: 30px;
+	font-weight: 600;
+}
+.menu__teacher__list {
+	margin: 0 auto;
+	display: grid;
+	justify-content: start;
+
+	max-width: 1400px;
+	padding-left: 25px;
+	> li > a {
+		color: white;
+		font-size: 22px;
+		font-weight: 500;
+		transition: transform 0.3s, box-shadow 0.3s;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	margin-top: 60px;
+	> li {
+		padding-top: 12px;
+		transition: transform 0.3s, box-shadow 0.3s;
+		&:hover {
+			transform: scale(1.013);
+		}
+	}
+}
+
+.select_header {
+	@extend %select_style_lan;
+	position: fixed;
+	top: 10px;
+	right: 90px;
+	background-color: transparent;
+	border: none;
+
+	> option {
+		@extend %select_style_lan;
+		&::before {
+			content: '';
+		}
+		width: 57px;
+		border: none;
+	}
+}
+
+.card {
+	padding: 0 15px;
+}
+
+.colums__category {
+	padding-left: 25px; 
+	margin: 0 auto;
+	margin-bottom: -50px;
+	display: grid;
+	justify-content: start;
+	max-width: 1500px;
+	
+	
+	> h2 {
+		
+		color: white;
+		font-size: 30px;
+		font-weight: 600;
+	}
+}
+
+.colums {
+	padding: 80px 1%;
+
+	margin: 0 auto;
+	gap: 10px;
+	display: grid;
+	/* // background-color: rgb(55, 55, 55); */
+	justify-content: center;
+
+	/* //color: whitesmoke;  */
+	margin-bottom: 40px;
+}
+.colums__informatics__teacher {
+	grid-template-columns: repeat(5, minmax(200px, 283px));
+	grid-template-rows: repeat(5, 340px);
+}
+.colums__literatura__teacher {
+	grid-template-columns: repeat(5, minmax(200px, 283px));
+	grid-template-rows: repeat(3, 340px);
+}
+.colums__phisics__teacher {
+	grid-template-columns: repeat(5, minmax(200px, 283px));
+	grid-template-rows: repeat(2, 340px);
+}
+.colums__history__teacher,
+.colums__natural__teacher, .colums__draw__teacher {
+	grid-template-columns: repeat(5, minmax(200px, 283px));
+	grid-template-rows: repeat(2, 340px);
+}
+.colums__english__teacher {
+	grid-template-columns: repeat(5, minmax(200px, 283px));
+	grid-template-rows: repeat(4, 340px);
+}
+.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(5, minmax(200px, 283px));
+	grid-template-rows: repeat(1, 340px);
+}
+.column {
+	// display: flex;
+	// flex-direction: column;
+	// flex: 1 1 auto;
+	justify-content: center;
+	background-color: $color_dark_card;
+	border-radius: 15px;
+	overflow: hidden;
+	margin: 0 1px -10px 1px;
+	position: relative;
+	transition: transform 0.3s, box-shadow 0.3s;
+	margin-bottom: 1px;
+}
+.column:hover {
+	box-shadow: 0 2px 2px #606060;
+	transform: scale(1.02);
+}
+
+.column:hover .picture .price .name .location {
+	transform: scale(1.02);
+}
+
+.picture {
+	align-items: start;
+	justify-content: center;
+
+	width: 100%;
+	> img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	transition: transform 0.3s;
+	background-color: #000000;
+	border-radius: 5%;
+	overflow: hidden;
+	height: 65%;
+}
+.name {
+	font-size: 23px;
+	/* color: rgba(242, 242, 242, 0.9) ; */
+	color: $color_tems;
+	margin: 2% 2% 3% 4%;
+}
+.price {
+	color: rgb(229, 229, 229);
+	font-size: 18px;
+	font-weight: 1100;
+	text-decoration: underline;
+	margin: 2%;
+	margin: 2% 2% 3% 4%;
+}
+.caption {
+	&::before {
+		content: '⭐ ';
+		font-size: 17px;
+	}
+	/* //color: rgba(211, 210, 210, 0.7);  */
+	color: rgb(217, 217, 217);
+	overflow: hidden;
+	text-align: center;
+	margin: 4% 3%;
+	text-align: start;
+	font-size: 17px;
+}
+.location {
+	color: rgb(203, 203, 203);
+	overflow: hidden;
+	text-align: center;
+	margin: 4% 4%;
+	text-align: start;
+	font-size: 16px;
+}
+@media (max-width: 1400px){
+	.colums__category {
+		margin: 0 ;
+		margin-bottom: -50px;
+		
+	}
+}
+@media (min-width: 1090px) {
+	.rules {
+		display: none;
+	}
+
+	.menu {
+	}
+	.burger-checkbox {
+		display: none;
+	}
+	.burger {
+		display: none;
+	}
+	.menu-list {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		color: white;
+		.menu-item {
+			color: white;
+			font-size: 21px;
+			padding: 7px 0px 7px 0px;
+			transition: 0.7s;
+			&:hover {
+				transform: scale(1.08);
+				color: rgb(0, 157, 255);
+			}
+		}
+
+		.menu-head {
+			color: rgb(0, 157, 255);
+		}
+	}
+	.menu-list {
+		transition: 0.3s;
+	}
+}
+@media (max-width: 1260px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(5, 320px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(3, 320px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(2, 320px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(2, 320px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(4, 320px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(1, 320px);
+}
+
+	.colums {
+		.column {
+			.name {
+				font-size: 22px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 17px;
+				}
+				font-size: 17px;
+			}
+			.location {
+				font-size: 16px;
+			}
+			margin-bottom: 1px;
+		}
+		margin-bottom: 1px;
+	}
+}
+
+@media (max-width: 1197px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(5, 315px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(3, 315px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(2, 315px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(2, 315px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(4, 315px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(5, minmax(200px, 250px));
+		grid-template-rows: repeat(1, 315px);
+}
+	.colums {
+		.column {
+			.name {
+				font-size: 22px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 17px;
+				}
+				font-size: 17px;
+			}
+			.location {
+				font-size: 15px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+@media (max-width: 1110px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(4, minmax(200px, 260px));
+		grid-template-rows: repeat(6, 320px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(4, minmax(200px, 260px));
+		grid-template-rows: repeat(4, 320px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(4, minmax(200px, 260px));
+		grid-template-rows: repeat(2, 320px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(4, minmax(200px, 260px));
+		grid-template-rows: repeat(3, 320px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(4, minmax(200px, 260px));
+		grid-template-rows: repeat(5, 320px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(4, minmax(200px, 260px));
+		grid-template-rows: repeat(2, 320px);
+}
+	.colums {
+		.column {
+			.name {
+				font-size: 22px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 17px;
+				}
+				font-size: 17px;
+			}
+			.location {
+				font-size: 16px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+	.rules {
+		display: inline-block;
+		padding-bottom: 20px;
+	}
+	.menu {
+		position: fixed;
+
+		top: 15px;
+		left: 80px;
+	}
+	.burger-checkbox {
+		position: absolute;
+		visibility: hidden;
+	}
+	.burger {
+		position: relative;
+		z-index: 1;
+		cursor: pointer;
+		display: block;
+		position: relative;
+		border: none;
+		background: transparent;
+		width: 40px;
+		height: 26px;
+	}
+	.burger::before,
+	.burger::after {
+		content: '';
+		left: 0;
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 4px;
+		border-radius: 10px;
+		background: #ffffff;
+	}
+	.burger::before {
+		top: 0;
+		box-shadow: 0 11px 0 #ffffff;
+		transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+	}
+	.burger::after {
+		bottom: 0;
+		transition: bottom 0.3s 0.15s, transform 0.3s;
+	}
+	.burger-checkbox:checked + .burger::before {
+		top: 11px;
+		transform: rotate(45deg);
+		box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+		transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+	}
+	.burger-checkbox:checked + .burger::after {
+		bottom: 11px;
+		transform: rotate(-45deg);
+		transition: bottom 0.3s, transform 0.3s 0.15s;
+	}
+	.menu-list {
+		top: 45px;
+		left: 0;
+		position: absolute;
+		display: grid;
+		gap: 12px;
+		font-size: 15px;
+		margin-left: -80px;
+		background: $color_dark_back;
+		list-style-type: none;
+		transform: translateX(-100%);
+		transition: 0.3s;
+		width: 250px;
+		height: 300px;
+	}
+	.menu-item {
+		display: block;
+		padding-left: 15px;
+		margin-right: 25px;
+		margin-left: 15px;
+		margin-top: -10px;
+		padding-top: 10px;
+		padding-bottom: 7px;
+		color: white;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: start;
+		text-decoration: none;
+		transition: 0.7s;
+	}
+	.menu-item:hover {
+		transform: scale(1.01);
+		color: rgb(0, 157, 255);
+		border-bottom: solid 1px rgb(0, 157, 255);
+		background-color: #303030;
+	}
+	.burger-checkbox:checked ~ .menu-list {
+		transform: translateX(0);
+	}
+	.menu-head {
+		margin-top: 20px;
+		color: rgb(0, 157, 255);
+	}
+
+	.rules {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		&:hover {
+			transform: scale(1.01);
+			color: rgb(0, 157, 255);
+		}
+	}
+}
+
+@media (max-width: 952px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(6, 305px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(4, 305px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(2, 305px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(3, 305px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(5, 305px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(2, 305px);
+}
+	.menu__teacher {
+		margin-bottom: 0px;
+		.menu__teacher__wrapper {
+			font-size: 22px;
+		}
+		.menu__teacher__list > li > a {
+			font-size: 20px;
+		}
+	}
+	.colums__category > h2 {
+		font-size: 27px;
+	}
+	.colums {
+		.column {
+			.name {
+				font-size: 20px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 16px;
+				}
+				font-size: 16px;
+			}
+			.location {
+				font-size: 15px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+@media (max-width: 847px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(6, 285px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(4, 285px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(2, 285px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(3, 285px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(5, 285px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(4, minmax(180px, 250px));
+		grid-template-rows: repeat(2, 285px);
+}
+
+	.colums {
+		.column {
+			.name {
+				font-size: 19px;
+			}
+
+			.price {
+				font-size: 17px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 15px;
+				}
+				font-size: 15px;
+			}
+			.location {
+				font-size: 14px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+
+@media (max-width: 807px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(7, 315px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(5, 315px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(3, 315px);
+	}
+	.colums__history__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(3, 315px);
+	}
+	.colums__natural__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(4, 315px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(7, 315px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(3, minmax(195px, 265px));
+		grid-template-rows: repeat(2, 315px);
+}
+	.colums {
+		gap: 7px;
+		padding: 0 7px;
+		padding-top: 70px;
+
+		.column {
+			.name {
+				font-size: 22px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 17px;
+				}
+				font-size: 17px;
+			}
+			.location {
+				font-size: 16px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+
+	.menu {
+		position: fixed;
+		top: 12.5px;
+		left: 65px;
+	}
+	.menu-list {
+		margin-left: -65px;
+	}
+	.telegram__link {
+		position: fixed;
+		top: 3px;
+		right: 30px;
+		width: 30px;
+		height: 30px;
+		> img {
+			width: 45px;
+			height: 45px;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+.scroll-button {
+	width: 57px;
+	height: 57px;
+}
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(7, 300px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(5, 300px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(3, 300px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(3, 300px);
+	}
+	.colums__natural__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(4, 300px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(7, 300px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(3, minmax(195px, 250px));
+		grid-template-rows: repeat(2, 300px);
+}
+	.menu__teacher {
+		margin-top: 85px;
+		.menu__teacher__wrapper {
+			font-size: 20px;
+		}
+		.menu__teacher__list > li > a {
+			font-size: 18px;
+		}
+	}
+	.colums__category > h2 {
+		font-size: 25px;
+	}
+
+	.colums {
+		.column {
+			.name {
+				font-size: 20px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 17px;
+				}
+				font-size: 17px;
+			}
+			.location {
+				font-size: 16px;
+			}
+		}
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 625px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(7, 275px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(5, 275px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(3, 275px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(3, 275px);
+	}
+	.colums__natural__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(4, 275px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(7, 275px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(2, 275px);
+}
+	.colums {
+		padding: 0 7px;
+		padding-top: 70px;
+
+		margin-bottom: 120px;
+
+		.column {
+			.name {
+				font-size: 18px;
+			}
+
+			.price {
+				font-size: 16px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 15px;
+				}
+				font-size: 15px;
+			}
+			.location {
+				font-size: 14px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.menu__teacher {
+		margin-top: 85px;
+		.menu__teacher__wrapper {
+			font-size: 18px;
+		}
+		.menu__teacher__list > li > a {
+			font-size: 16px;
+		}
+	}
+	.colums__category > h2 {
+		font-size: 23px;
+	}
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(7, 255px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(5, 255px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(3, 255px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(3, 255px);
+	}
+	.colums__natural__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(4, 255px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(7, 255px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(3, minmax(130px, 215px));
+		grid-template-rows: repeat(2, 255px);
+}
+	.colums {
+		padding: 0 7px;
+		padding-top: 70px;
+
+		.column {
+			.name {
+				font-size: 16px;
+			}
+
+			.price {
+				font-size: 14.5px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 14px;
+				}
+				font-size: 14px;
+			}
+			.location {
+				font-size: 13px;
+			}
+			margin-bottom: 1px;
+		}
+		margin-bottom: 80px;
+	}
+}
+
+@media (max-width: 542px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(2, minmax(215px, 260px));
+		grid-template-rows: repeat(11, 340px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(2, minmax(215px, 260px));
+		grid-template-rows: repeat(8, 340px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(2, minmax(215px, 260px));
+		grid-template-rows: repeat(4, 340px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(2, minmax(215px, 260px));
+		grid-template-rows: repeat(5, 340px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(2, minmax(215px, 260px));
+		grid-template-rows: repeat(10, 340px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(2, minmax(215px, 260px));
+		grid-template-rows: repeat(3, 340px);
+}
+	.colums__category > h2 {
+		font-size: 25px;
+	}
+	.colums {
+		padding: 0 7px;
+		padding-top: 70px;
+
+		.column {
+			.name {
+				font-size: 22px;
+			}
+
+			.price {
+				font-size: 20px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 18px;
+				}
+				font-size: 18px;
+			}
+			.location {
+				font-size: 16px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+
+@media (max-width: 515px) {
+	.colums__category > h2 {
+		font-size: 25px;
+	}
+	.colums {
+		.column {
+			.name {
+				font-size: 22px;
+			}
+
+			.price {
+				font-size: 20px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 18px;
+				}
+				font-size: 18px;
+			}
+			.location {
+				font-size: 16px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+@media (max-width: 470px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 250px));
+		grid-template-rows: repeat(11, 315px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 250px));
+		grid-template-rows: repeat(8, 315px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 250px));
+		grid-template-rows: repeat(4, 315px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 250px));
+		grid-template-rows: repeat(5, 315px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 250px));
+		grid-template-rows: repeat(10, 315px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(2, minmax(130px, 250px));
+		grid-template-rows: repeat(3, 315px);
+}
+	.colums {
+		padding: 0 7px;
+		padding-top: 70px;
+		gap: 5px;
+		.column {
+			.name {
+				font-size: 20px;
+			}
+
+			.price {
+				font-size: 18px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 16px;
+				}
+				font-size: 16px;
+			}
+			.location {
+				font-size: 15px;
+			}
+			margin-bottom: 1px;
+		}
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 420px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(11, 285px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(8, 285px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(4, 285px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(5, 285px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(11, 285px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+	grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(3, 285px);
+}
+	.colums {
+		padding: 0 7px;
+		padding-top: 70px;
+
+		.column {
+			.name {
+				font-size: 17px;
+			}
+
+			.price {
+				font-size: 16px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 15px;
+				}
+				font-size: 15px;
+			}
+			.location {
+				font-size: 14px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.colums__informatics__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(11, 255px);
+	}
+	.colums__literatura__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(8, 255px);
+	}
+	.colums__phisics__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(4, 255px);
+	}
+	.colums__history__teacher,
+	.colums__natural__teacher, .colums__draw__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(5, 255px);
+	}
+	.colums__english__teacher {
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(10, 255px);
+	}
+	.colums__administration__teacher, .colums__other__teacher{
+		grid-template-columns: repeat(2, minmax(130px, 240px));
+		grid-template-rows: repeat(3, 255px);
+	}
+	.colums {
+		padding: 0 7px;
+		padding-top: 70px;
+
+		.column {
+			.name {
+				font-size: 15px;
+			}
+
+			.price {
+				font-size: 14px;
+				font-weight: 1050;
+			}
+			.caption {
+				&::before {
+					content: '⭐ ';
+					font-size: 13px;
+				}
+				font-size: 13px;
+			}
+			.location {
+				font-size: 12px;
+			}
+			margin-bottom: 1px;
+		}
+	}
+}
+
+@media (max-width: 780px) {
+	.header {
+		width: 100%;
+		height: 50px;
+	}
+	.menu-list {
+		top: 37px;
+	}
+	.header__contain {
+		justify-content: end;
+		align-items: center;
+	}
+
+	form {
+		height: 38px;
+		top: 6px;
+		left: 121px;
+	}
+	input {
+		height: 38px;
+	}
+	button {
+		height: 39px;
+		top: -2px;
+	}
+
+	.logo > img {
+		width: 55px;
+		height: 50px;
+	}
+}
